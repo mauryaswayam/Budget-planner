@@ -1,0 +1,138 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+/* Button Styles */
+
+.button {
+  text-align: center;
+  margin: 2em;
+}
+
+.button button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 1em 2em;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button button:hover {
+  background-color: #3e8e41;
+}
+
+/* Form Container Styles */
+
+.login-container,.register-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 0.5s;
+}
+
+/* Form Styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="email"], input[type="password"], input[type="username"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="username"]:focus {
+  border-color: #aaa;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Animation Styles */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Toggle Form Animation */
+
+.login-container,.register-container {
+  transition: opacity 0.5s;
+}
+
+.login-container.ng-hide,.register-container.ng-hide {
+  opacity: 0;
+}
+
+/* Slide In Animation */
+
+.login-container,.register-container {
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.login-container.active,.register-container.active {
+  transform: translateX(0);
+}
+
+/* Button Click Animation */
+
+.button button:active {
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}

@@ -1,0 +1,97 @@
+<div class="navbar">
+  <h2>INCOME</h2>
+</div>
+<div class="main-container">
+  <div class="container">
+    <h2>Income</h2>
+    <form [formGroup]="incomeForm" (ngSubmit)="onSubmit()" class="input-form">
+      <div class="form-Group">
+        <label for="month">Select Month:</label>
+        <select
+          formControlName="month"
+          id="month"
+          class="formControl"
+          (change)="onChange($event)"
+        >
+          <option value="" disabled>Select Month</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+        </select>
+      </div>
+      <div class="total-income">
+        Total Income for {{ selectedMonth }}:
+        {{ calculateTotalIncome(selectedMonth) }}
+      </div>
+      <div class="form-Group">
+        <label for="investments">Investments:</label>
+        <select
+          formControlName="investments"
+          id="investments"
+          class="formControl"
+          [class.disabled-dropdown]="!monthselected"
+        >
+          <option value="" disabled>Select Investments</option>
+          <option value="401(k)">401(k)</option>
+          <option value="stocks">Stocks</option>
+          <option value="real estate">Real Estate</option>
+        </select>
+      </div>
+      <div class="form-Group">
+        <label for="source">Source of Income:</label>
+        <select
+          formControlName="Source"
+          id="Source"
+          class="formControl"
+          [class.disabled-dropdown]="!monthselected"
+        >
+          <option value="" disabled>Select Source</option>
+          <option value="Salary">Salary</option>
+          <option value="freelancing">Freelancing</option>
+          <option value="stocks">stocks</option>
+        </select>
+      </div>
+      <div class="form-Group">
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          formControlName="amount"
+          id="amount"
+          class="formControl"
+          placeholder="Enter amount"
+          [class.disabled-dropdown]="!monthselected"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [class.disabled-dropdown]="!monthselected"
+      >
+        Add
+      </button>
+    </form>
+    <hr />
+    <h3>Income list - {{ selectedMonth }}</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Source of Income</th>
+          <th>Amount</th>
+          <th>Investments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let income of getFilteredIncomes()">
+          <td>{{ income?.source }}</td>
+          <td>{{ income?.amount }}</td>
+          <td>{{ income?.investments }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="input-form">
+      <button class="btn btn-primary" (click)="onBack()">Back</button>
+      <div class="form-Group"></div>
+      <button class="btn btn-primary" (click)="saveform()">Save</button>
+    </div>
+  </div>
+</div>

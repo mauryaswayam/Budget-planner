@@ -1,0 +1,288 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Card container */
+  
+  .main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s;
+  }
+  
+  .main-container:hover {
+    transform: perspective(1000px) rotateY(10deg);
+  }
+  
+  /* Navbar */
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Navbar styles */
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .navbar h2 {
+    margin: 0;
+  }
+  
+  /* Main container styles */
+  
+  .main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* Form styles */
+  
+  .input-form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select:focus, input[type="number"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Table styles */
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #5a93b1;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .strikeout {
+    text-decoration: line-through;
+  }
+  
+  /* Animations */
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .input-form {
+    animation: fade-in 0.5s;
+  }
+  
+  .table {
+    animation: slide-in 0.5s;
+  }
+  
+  .navbar h2 {
+    margin: 0;
+  }
+  
+  /* Form styles */
+  
+  .input-form {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select {
+    height: 35px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Table styles */
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table thead th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .strikeout {
+    text-decoration: line-through;
+  }
+  
+  /* 3D card effect */
+  
+  .main-container {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .main-container .container {
+    transform: translateZ(20px);
+  }
+  
+  .main-container:hover .container {
+    transform: translateZ(40px);
+  }
+  
+  .main-container .navbar {
+    transform: translateZ(10px);
+  }
+  
+  .main-container:hover .navbar {
+    transform: translateZ(30px);
+  }
+  
+  .main-container .input-form {
+    transform: translateZ(30px);
+  }
+  
+  .main-container:hover .input-form {
+    transform: translateZ(50px);
+  }
+  
+  .main-container .table {
+    transform: translateZ(40px);
+  }
+  
+  .main-container:hover .table {
+    transform: translateZ(60px);
+  }

@@ -1,0 +1,22 @@
+
+<div class="navbar">
+    <h1>Budget Planner</h1>
+</div>
+<div class="button">
+    <button (click)="onNavigateLogin()">Login</button>
+    <button (click)="onNavigateRegister()">Register</button>
+</div>
+
+<div class="register-container">
+    <!-- Register -->
+    <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()">
+      <label>Username</label>
+      <input type="text" placeholder="Username" formControlName="text"><br><br>
+      <label>Email</label>
+      <input type="email" placeholder="Email" formControlName="email"><br><br>
+      <label>Password</label>
+      <input type="password" placeholder="Password" formControlName="password"><br><br>
+      <button type="submit">Register</button>
+      <p (click)="onNavigateLogin()">Already have an account!! <span class="highlighted">Login</span></p>
+    </form>
+</div>
