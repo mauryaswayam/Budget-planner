@@ -10,25 +10,11 @@
 <div class="login-container">
   <!-- Login-->
   <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
-    <label> Email</label>
-    <input
-      type="email"
-      name="email"
-      placeholder="Email"
-      formControlName="email"
-    /><br /><br />
-    <label> Password</label>
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="Password"
-      formControlName="password"
-    />
-    <br /><br />
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Email" formControlName="email" />
+    <label>Password</label>
+    <input type="password" name="password" id="password" placeholder="Password" formControlName="password" />
     <button type="submit">Login</button>
-    <p (click)="onNavigateRegister()">
-      Don't Have a account? Please Register your Account..
-    </p>
+    <p (click)="onNavigateRegister()">Don't Have an account? Please Register your Account..</p>
   </form>
 </div>
