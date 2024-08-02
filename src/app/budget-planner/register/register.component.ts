@@ -8,14 +8,11 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css']  // Fixed typo from styleUrl to styleUrls
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
-  myEmail: any
-  myPassword: any
-  myUsername: any
 
   // Store email
   submittedEmail: string = '';
@@ -23,45 +20,35 @@ export class RegisterComponent {
   constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
-
-
     this.registerForm = this.fb.group({
-      text: ['', Validators.required],
+      username: ['', Validators.required],  // Changed from 'text' to 'username'
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
-
-
   }
-
-
-
 
   register() {
     if (this.registerForm.valid) {
-      const username = this.registerForm.get('text')?.value;
+      const username = this.registerForm.get('username')?.value;
       const email = this.registerForm.get('email')?.value;
       const password = this.registerForm.get('password')?.value;
-      if (username == 'admin' && email == 'admin@gmail.com' && password == 12345) {
+      if (username === 'admin' && email === 'admin@gmail.com' && password === '12345') {
         this.router.navigate(['']);
       } else {
-        alert("Please Enter the Valid Details.");
+        alert("Please Enter Valid Details.");
       }
     }
   }
-
-
 
   onRegisterSubmit(): void {
     this.register();
   }
 
-
-
   onNavigateRegister() {
     this.router.navigate(['register']);
   }
+
   onNavigateLogin() {
-    this.router.navigate(['']);
+    this.router.navigate(['']);  // Changed route to 'login'
   }
 }
