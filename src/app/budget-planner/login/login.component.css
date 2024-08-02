@@ -1,138 +1,111 @@
-/* Global Styles */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
-/* Navbar Styles */
 
 .navbar {
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  width: 100%;
   text-align: center;
-  animation: fadeIn 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transform: translateZ(0);
+  transition: all 0.3s ease;
 }
 
-.navbar h1 {
-  margin: 0;
+.navbar:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
 }
-
-/* Button Styles */
 
 .button {
+  margin: 20px 0;
   text-align: center;
-  margin: 2em;
 }
 
 .button button {
-  background-color: #4CAF50;
-  color: #fff;
+  background: #2196F3;
   border: none;
-  padding: 1em 2em;
-  font-size: 16px;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
 
 .button button:hover {
-  background-color: #3e8e41;
+  background: #1976D2;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
-/* Form Container Styles */
-
-.login-container,.register-container {
-  max-width: 400px;
-  margin: 40px auto;
+.login-container {
+  background: white;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  animation: fadeIn 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 300px;
+  margin-left: 582px;
+  text-align: center;
+  transform: translateZ(0);
+  transition: all 0.3s ease;
 }
 
-/* Form Styles */
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+.login-container:hover {
+  box-shadow: 0 8px 16px rgb(2 82 173);
+  transform: translateY(-5px);
 }
 
-label {
+.login-container label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-container input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
   margin-bottom: 10px;
 }
 
-input[type="email"], input[type="password"], input[type="username"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  transition: border-color 0.2s;
-}
-
-input[type="email"]:focus, input[type="password"]:focus, input[type="username"]:focus {
-  border-color: #aaa;
-}
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
+.login-container button {
+  background: #4CAF50;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  font-size: 16px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-input[type="submit"]:hover {
-  background-color: #3e8e41;
+.login-container button:hover {
+  background: #45a049;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
-/* Animation Styles */
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.login-container p {
+  color: #4CAF50;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-/* Toggle Form Animation */
-
-.login-container,.register-container {
-  transition: opacity 0.5s;
-}
-
-.login-container.ng-hide,.register-container.ng-hide {
-  opacity: 0;
-}
-
-/* Slide In Animation */
-
-.login-container,.register-container {
-  transform: translateX(-100%);
-  transition: transform 0.5s;
-}
-
-.login-container.active,.register-container.active {
-  transform: translateX(0);
-}
-
-/* Button Click Animation */
-
-.button button:active {
-  transform: scale(0.9);
-  transition: transform 0.2s;
+.login-container p:hover {
+  text-decoration: underline;
 }
