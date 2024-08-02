@@ -1,6 +1,10 @@
 # BudgetPlanner
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6
+##register
+username:admin
+emial:admin@gmail.com
+password:12345
 ##login
 email:admin@gmail.com
 password:12345
