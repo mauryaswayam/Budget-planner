@@ -1,116 +1,134 @@
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background: #e0e0e0;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  background: #f0f0f0;
 }
 
 .navbar {
-  background: #3f51b5;
-  color: white;
-  padding: 15px;
   width: 100%;
+  background-color: #333;
+  padding: 1em 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  transform: translateZ(0);
-  transition: all 0.3s ease;
 }
 
-.navbar:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  transform: translateY(-5px);
+.navbar h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 .button {
-  margin: 20px 0;
-  text-align: center;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 .button button {
-  background: #4CAF50;
+  background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .button button:hover {
-  background: #45a049;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .register-container {
-  background: white;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  width: 320px;
-  margin-left: 582px;
-  text-align: center;
-  transform: translateZ(0);
-  transition: all 0.3s ease;
+  margin-bottom: 2em;
 }
 
-.register-container:hover {
-  box-shadow: 0 8px 16px rgb(182 19 7);
-    transform: translateY(-5px);
+.register-container form {
+  display: flex;
+  flex-direction: column;
 }
 
 .register-container label {
-  display: block;
-  margin: 10px 0 5px;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
 .register-container input {
-  width: calc(100% - 22px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.register-container button {
-  background: #3f51b5;
+.register-container button[type="submit"] {
+  background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 16px;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
-.register-container button:hover {
-  background: #303f9f;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+.register-container button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .register-container p {
-  color: #3f51b5;
+  color: #4CAF50;
   cursor: pointer;
-  margin-top: 10px;
+  text-align: center;
 }
 
-.register-container p:hover {
+.register-container .highlighted {
+  font-weight: bold;
   text-decoration: underline;
 }
 
-.highlighted {
-  font-weight: bold;
-  color: #303f9f;
+.register-container p:hover .highlighted {
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .button {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .navbar h1 {
+    font-size: 1.5em;
+  }
+
+  .register-container {
+    width: 95%;
+    padding: 1em;
+  }
 }
